@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="style.css">
-    <title>Administrar Tipo de Moneda</title>
+    <title>consultar moneda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Administracion tipo de cambio</h1>
-    
-    <form>
-        <label for="tipo_cambio">Tipo de Cambio</label>
-        <input type="number" name="tipo_cambio" id="tipo_cambio">
 
-        <label for="moneda_origen">Moneda origen</label>
-        <input type="text" name="moneda_origen" id="moneda_origen">
+    <div class="container">
 
-        <label for="moneda_destino">Moneda destino</label>
-        <input type="text" name="moneda_destino" id="moneda_destino">
-    
-        <input type="submit" value="enviar" id="submit">
-    </form>
+        <div class="flex">
+            <h1>Consultar Moneda</h1>
+            
+            <form>
+                <label for="monto">Monto</label>
+                <input type="number" name="monto" id="monto" required>
+        
+                <label for="moneda_origen">Moneda origen</label>
+                <select name="moneda_origen" id="moneda_origen">
+                    <option value="PEN">Soles</option>
+                    <option value="USD">Dolares Estadounidenses</option>
+                    <option value="EUR">Euros</option>
+                    <option value="JPY">Yenes</option>
+                    <option value="MXN">Pesos Mexicanos</option>
+                </select>
+        
+                <label for="moneda_destino">Moneda destino</label>
+                <select name="moneda_destino" id="moneda_destino">
+                    <option value="PEN">Soles</option>
+                    <option value="USD" selected>Dolares Estadounidenses</option>
+                    <option value="EUR">Euros</option>
+                    <option value="JPY">Yenes</option>
+                    <option value="MXN">Pesos Mexicanos</option>
+                </select>
+            
+                <input type="submit" value="enviar" id="submit">
+            </form>
+
+            <div class="resultado">
+                <h2>Monto: </h2>
+                <p id="monto_resultado"></p>
+            </div>
+
+
+        </div>
+
+    </div>
+
 
 <script src="app.js"></script>
 </body>
